@@ -42,7 +42,9 @@ public class JSONXMLConverterImpl implements JSONXMLConverterI
 	{
 		try 
 		{
-			Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
+			DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder = builderFactory.newDocumentBuilder();
+			Document document = docBuilder.newDocument();
 
 			FileReader reader=new FileReader("constants.properties");  
 			p.load(reader);  
