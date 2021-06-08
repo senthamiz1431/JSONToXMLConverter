@@ -22,7 +22,8 @@ public class App
 			
 			if(jsonFilepath != null && new File(jsonFilepath).exists())
 			{
-				if(xmlFilePath != null && new File(xmlFilePath.substring(0, xmlFilePath.lastIndexOf(File.separator))).exists())
+				String strXmlFileName = xmlFilePath.substring(0, xmlFilePath.lastIndexOf(File.separator));
+				if(xmlFilePath != null && new File(strXmlFileName).exists())
 				{
 					logger.log(Level.INFO, "JSONToXMLConverter starts \n JSON input : " + jsonFilepath + "\n XML output : " + xmlFilePath);
 					
