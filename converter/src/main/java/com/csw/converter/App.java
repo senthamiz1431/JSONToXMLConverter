@@ -37,7 +37,7 @@ public class App
 			}
 			else
 			{
-				logger.log(Level.SEVERE, "Invalid json file path " + args[0]);
+				logger.log(Level.SEVERE, "Invalid json file path " + jsonFilepath);
 			}
 		}
 		catch(Exception e) {
