@@ -24,15 +24,15 @@ public class App
 			{
 				if(xmlFilePath != null && new File(xmlFilePath.substring(0, xmlFilePath.lastIndexOf(File.separator))).exists())
 				{
-					logger.log(Level.INFO, "JSONToXMLConverter starts \n JSON input : " + args[0] + "\n XML output : " + args[1]);
+					logger.log(Level.INFO, "JSONToXMLConverter starts \n JSON input : " + jsonFilepath + "\n XML output : " + xmlFilePath);
 					
-					jsonToXmlConverter.convertJSONtoXML(args[0], args[1]);
+					jsonToXmlConverter.convertJSONtoXML(jsonFilepath, xmlFilePath);
 					
 					logger.log(Level.INFO, "JSONToXMLConverter ends");
 				}
 				else
 				{
-					logger.log(Level.SEVERE, "Invalid xml file path " + args[1]);
+					logger.log(Level.SEVERE, "Invalid xml file path " + xmlFilePath);
 				}
 			}
 			else
